@@ -22,7 +22,7 @@ class filterAndEdit2 extends Simulation {
 
 
 	val scn = scenario("filterAndEdit2")
-		.exec(http("All product page")
+		.exec(http("All product on page")
 			.get("/computers")
 			)
 //		.pause(3)

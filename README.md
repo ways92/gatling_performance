@@ -1,2 +1,2 @@
 # Gatling Performance
-Testing web ui and API
+Performance testing  web ui and API

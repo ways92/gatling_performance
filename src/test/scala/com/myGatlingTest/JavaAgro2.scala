@@ -22,20 +22,20 @@ class JavaAgro2 extends Simulation {
 		.exec(http("Home page")
 			.options("/highlights")
 
-			.resources(http("request_1")
+			.resources(http("Home Page")
 			.options("/products")
 			,
-            http("request_2")
+            http("Product Slider")
 			.get("/products")
 			,
-            http("request_3")
+            http("Highlight Slider")
 			.get("/highlights")
 			))
 		.pause(1)
-		.exec(http("Product")
+		.exec(http("Product Slider")
 			.get("/products")
 
-			.resources(http("request_5")
+			.resources(http("Highlight Slider")
 			.get("/highlights")
 			))
 

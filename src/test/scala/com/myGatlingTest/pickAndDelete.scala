@@ -18,21 +18,22 @@ class pickAndDelete extends Simulation {
 		.userAgentHeader("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36")
 
 
-	val getAllData = exec(http("request_0")
+	val getAllData = exec(http("All data")
 		.get("/computers")
 	)
 		.pause(2)
 
-	val pickData = exec(http("request_1")
+	val selectData = exec(http("Select product")
 		.get("/computers/381")
 	)
 		.pause(2)
 
-	val deleteData = exec(http("request_2")
+	val deleteData = exec(http("Delete product")
 		.post("/computers/381/delete")
 	)
 
-	val scn = scenario("pickAndDelete").exec(getAllData, pickData, deleteData)
+	val scn = scenario("pickAndDelete").exec(getAllData, selectData, deleteData)
+
 //		.exec(http("request_0")
 //			.get("/computers")
 //			)
